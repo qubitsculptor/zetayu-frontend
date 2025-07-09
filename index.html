@@ -3,406 +3,398 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zetayu</title>
-  <!-- Inter font import -->
+  <title>Zetayu – Production-Ready AI Engineering</title>
+  
+  <!-- Fonts: Inter for UI, IBM Plex Mono for a tech feel -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  
   <!-- SEO / Open Graph -->
-  <meta name="description" content="Zetayu builds practical GenAI, Agentic AI &amp; Edge AI solutions.">
-  <meta property="og:title" content="Zetayu">
-  <meta property="og:description" content="Zetayu builds practical GenAI, Agentic AI &amp; Edge AI solutions.">
+  <meta name="description" content="Zetayu designs, builds, and deploys production-ready Generative, Agentic & Edge AI systems for enterprise.">
+  <meta property="og:title" content="Zetayu – Production-Ready AI Engineering">
+  <meta property="og:description" content="Zetayu designs, builds, and deploys production-ready Generative, Agentic & Edge AI systems for enterprise.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#0f0f0f">
-  <link rel="icon" href="/logo.png">
+  <meta name="theme-color" content="#000000">
+  <!-- Professional Text-Based Favicon (Z) -->
+<link rel="icon" href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3e%3crect width='100' height='100' rx='12' fill='black'/%3e%3ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-size='60' font-weight='600' fill='white' font-family='sans-serif'%3eZ%3c/text%3e%3c/svg%3e">
+  
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Plain background — no decoration */
-    :root { --accent: #ffffff; } /* neutral accent, low‑opacity white */
-    body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; }
-    /* Balanced body text */
-    p,
-    li {
-      font-size: 1rem;
-    }
-
-    /* -------------------------------------------------- */
-    /* Accent & animations                                */
-    /* -------------------------------------------------- */
-    a:hover { text-decoration: underline; }
-
-    /* title underline animation */
-    .tagline-underline::after {
-      content: "";
-      position: absolute;
-      left: 0; bottom: -4px;
-      height: 2px;
-      width: 0;
-      background: color-mix(in srgb, var(--accent) 45%, transparent);
-      animation: underlineGrow 1.2s ease-out forwards;
-    }
-    @keyframes underlineGrow { from { width: 0; } to { width: 100%; } }
-
-    /* glass card */
-    .card {
-      position: relative;
-      backdrop-filter: blur(8px);
-    }
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--accent);
-      opacity: .25;
-    }
-
-    /* smooth scroll & snap */
-    html { scroll-behavior: smooth; }
-    main.snap { scroll-snap-type: y mandatory; }
-    .snap-start { scroll-snap-align: start; }
-
-    /* ripple effect */
-    .button-ripple { position: relative; overflow: hidden; }
-    .button-ripple::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(255,255,255,0.2);
-      border-radius: 50%;
-      transform: scale(0);
-      opacity: 0;
-      transition: transform 0.4s, opacity 0.8s;
-    }
-    .button-ripple:active::after {
-      transform: scale(4);
-      opacity: 0.4;
-    }
-
-    /* hero parallax (small translate) */
-    .parallax {
-      will-change: transform;
-      transition: transform 0.2s ease-out;
-    }
-
-    /* section visual layout */
-    .section-flex {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    @media (min-width: 1024px) {
-      .section-flex {
-        flex-direction: row;
-        align-items: center;
-      }
-    }
-    /* faint paper‑grid backdrop */
-    .section-grid-bg {
-      position: relative;
-    }
-    .section-grid-bg::before {
-      content: none;
-    }
-
-    /* gradient placeholder for missing images */
-    .gradient-bg{
-      background-image:
-        radial-gradient(circle at 30% 30%, rgba(0,245,255,.25), transparent 60%),
-        radial-gradient(circle at 70% 70%, rgba(255,0,255,.20), transparent 60%),
-        linear-gradient(135deg, rgba(255,255,255,.05), rgba(0,0,0,.10));
-    }
-  </style>
+  
   <!-- AOS scroll‑in animation -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  
+  <style>
+    /* --- UPGRADED "AI STARTUP" STYLING --- */
+    :root {
+      --color-accent: #4338ca; /* A professional, vibrant indigo */
+    }
+
+    body {
+      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+      background-color: #000;
+      color: #e2e2e2;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Subtle Animated Gradient Background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 20% 20%, rgba(67, 56, 202, 0.1), transparent 25%),
+                  radial-gradient(circle at 80% 70%, rgba(100, 100, 255, 0.08), transparent 25%);
+      z-index: -1;
+      animation: gradient-pan 35s linear infinite;
+      will-change: transform;
+    }
+
+    @keyframes gradient-pan {
+      0% { transform: translate(0%, 0%) rotate(0deg); }
+      25% { transform: translate(-20%, 10%) rotate(90deg); }
+      50% { transform: translate(-40%, 0%) rotate(180deg); }
+      75% { transform: translate(-20%, -10%) rotate(270deg); }
+      100% { transform: translate(0%, 0%) rotate(360deg); }
+    }
+
+    html { scroll-behavior: smooth; }
+    
+    .font-mono { font-family: 'IBM Plex Mono', monospace; }
+    .text-accent { color: var(--color-accent); }
+
+    /* Polished Card Style */
+    /* The new "Content Block" style, inspired by OpenAI */
+.content-block {
+  border-radius: 1rem; /* 16px */
+  overflow: hidden; /* This is crucial for the rounded corners to work on the image */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-block:hover {
+  transform: translateY(-8px); /* A subtle lift effect */
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+}
+
+.content-block .text-content {
+  padding: 1.5rem; /* 24px */
+}
+
+    /* General Layout & Text Widths */
+    .main-content-width { max-width: 65rem; } /* 1040px */
+    .text-width { max-w-3xl; } /* 768px */
+    
+    /* Interactive Hero Spotlight Effect */
+    #hero-spotlight {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      pointer-events: none;
+      background: radial-gradient(circle 400px at var(--x, 50%) var(--y, 50%), rgba(67, 56, 202, 0.15), transparent 80%);
+      transition: background 0.1s ease-out;
+    }
+  </style>
 </head>
-<body class="relative bg-zinc-900 text-gray-100 font-sans antialiased dark:bg:white dark:text-zinc-900">
+<body class="antialiased">
   <!-- Sidebar -->
-  <aside class="fixed top-0 left-0 hidden md:flex flex-col h-full w-56 bg-zinc-950/80 backdrop-blur border-r border-zinc-800 px-5 py-8">
-    <a href="#home" class="text-gray-100 font-semibold mb-8 text-xl">Zetayu</a>
+  <aside class="fixed top-0 left-0 hidden md:flex flex-col h-full w-60 bg-black/30 backdrop-blur-sm border-r border-white/10 px-6 py-8 z-20">
+    <!-- Polished Text-Based Logo -->
+    <a href="#home" class="text-white font-mono tracking-widest uppercase font-bold mb-10 text-lg">Zetayu</a>
     <nav class="space-y-4 text-sm">
-      <a href="#intro" class="block text-gray-400 hover:text-white">Introduction</a>
-      <a href="#services-build" class="block text-gray-400 hover:text-white">Services</a>
-      <a href="#about-us" class="block text-gray-400 hover:text-white">About Us</a>
-      <a href="#contact" class="block text-gray-400 hover:text-white">Contact</a>
+      <a href="#pipeline" class="block text-gray-400 hover:text-white transition-colors">In The Pipeline</a>
+      <a href="#services" class="block text-gray-400 hover:text-white transition-colors">Services</a>
+      <a href="#our-approach" class="block text-gray-400 hover:text-white transition-colors">Our Approach</a>
+      <a href="#contact" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
     </nav>
-    <button id="toggleTheme" class="mt-auto text-xs text-gray-500 hover:text-white">
-      Toggle&nbsp;theme
-    </button>
   </aside>
 
-  <main class="min-h-screen flex flex-col items-center md:ml-56 snap">
+  <main class="min-h-screen flex flex-col items-center md:ml-60">
     <!-- Header -->
-    <header id="home" class="w-full px-6 py-24 text-center bg-zinc-950 bg-opacity-80 backdrop-blur">
-      <h1 class="parallax text-6xl lg:text-7xl font-light tracking-wide text-white">Zetayu</h1>
-      <p class="text-gray-400 mt-3 text-lg relative">
-        <span class="tagline-underline">GenAI · Agentic AI · Edge AI</span>
-      </p>
+    <header id="home" class="relative w-full h-screen flex flex-col items-center justify-center text-center p-6 overflow-hidden">
+      <!-- Interactive Spotlight -->
+      <div id="hero-spotlight"></div>
+      
+      <!-- Optional: Background Video. Keep it very subtle if you use one. -->
+      <!-- <video class="absolute top-0 left-0 w-full h-full object-cover opacity-10" src="your-abstract-video.mp4" autoplay loop muted playsinline></video> -->
+      
+      <div class="relative z-10" data-aos="fade-up">
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tighter text-white leading-tight">
+          Engineering Production-Ready AI.
+        </h1>
+        <p class="mt-6 text-width mx-auto text-lg sm:text-xl text-gray-300 leading-relaxed">
+          We architect and build robust, maintainable AI systems. Our expertise covers <span class="font-mono text-white">Generative</span>, <span class="font-mono text-white">Agentic</span>, and <span class="font-mono text-white">Edge AI</span> for enterprise applications.
+        </p>
+        <div class="mt-10 flex gap-4 justify-center">
+          <a href="#contact" class="bg-white text-black px-6 py-3 rounded-md text-base font-medium hover:bg-gray-200 transition-transform hover:scale-105">Discuss a Project</a>
+          <a href="#services" class="border border-white/50 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-white/10 transition-transform hover:scale-105">Explore Services</a>
+        </div>
+      </div>
     </header>
 
-    <!-- Introduction -->
-    <section id="intro" class="snap-start max-w-5xl w-full mx-auto px-6 py-8" data-aos="fade-up">
-      <div class="section-grid-bg px-6 py-12 rounded-lg">
-        <div class="section-flex max-w-5xl mx-auto">
-          <!-- Left text -->
-          <div class="flex-1">
-            <h2 class="text-4xl font-semibold mb-4 text-white">Unified AI for all your work.</h2>
-            <p class="text-gray-400 mb-6 leading-relaxed">
-              Search, generate &amp; automate — anywhere, any modality. One platform, endless workflows.
-            </p>
-            <ul class="list-disc list-inside text-gray-400 space-y-1">
-              <li>Natural‑language data retrieval</li>
-              <li>Instant multimodal generation</li>
-              <li>Secure private deployments</li>
-            </ul>
-          </div>
-          <!-- Right visual -->
-          <div class="flex-1 lg:pl-10">
-            <div class="gradient-bg h-64 w-full rounded-xl shadow-lg ring-1 ring-white/10 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-white/60" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <circle cx="12" cy="12" r="3" stroke-width="2"/>
-                <path d="M12 2v7M12 14v8M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h7M14 12h8M4.93 19.07l4.24-4.24M14.83 9.17l4.24-4.24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+    <!-- ====================================================== -->
+<!--           PRODUCTS / APPLIED AI RESEARCH SECTION (V2)    -->
+<!-- ====================================================== -->
+<section id="pipeline" class="w-full main-content-width mx-auto px-6 py-24">
+    <div class="mb-12" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold text-white">Applied AI Research</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Zeta-Agri Product Block with new abstract image -->
+        <div class="content-block" data-aos="fade-up">
+            <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="snap-start max-w-5xl w-full mx-auto px-6 py-8" data-aos="fade-up">
-      <div class="section-grid-bg px-6 py-12 rounded-lg">
-        <div class="section-flex max-w-5xl mx-auto">
-          <!-- Left visual -->
-          <div class="flex-1 lg:pr-10 order-last lg:order-first">
-            <div class="gradient-bg h-64 w-full rounded-xl shadow-lg ring-1 ring-white/10 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-white/60" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <rect x="3" y="5" width="18" height="14" rx="3" stroke-width="2"/>
-                <circle cx="12" cy="12" r="3" stroke-width="2"/>
-              </svg>
+            <div class="text-content bg-[#111111]">
+                <h3 class="text-xl font-semibold text-white">Zeta-Agri</h3>
+                <p class="text-gray-400 mt-2 text-sm">An agentic assistant for precision agriculture, integrating satellite and IoT data.</p>
+                <span class="inline-block mt-4 text-xs font-mono text-gray-500">R&D / Proof of Concept</span>
             </div>
-          </div>
-          <!-- Right text -->
-          <div class="flex-1">
-            <h2 class="text-4xl font-semibold mb-4 text-white">Own your AI stack.</h2>
-            <p class="text-gray-400 mb-6 leading-relaxed">
-              Full control from training data to on‑device inference using open standards—no vendor lock‑in.
-            </p>
-            <ul class="list-disc list-inside text-gray-400 space-y-1">
-              <li>Self‑host or cloud</li>
-              <li>Full access to model weights</li>
-              <li>Portable ONNX &amp; TFLite deployment</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="snap-start flex-grow max-w-5xl w-full mx-auto px-6 py-8" data-aos="fade-up">
-      <div class="section-flex mb-10">
-        <!-- Left: text -->
-        <div class="flex-1">
-          <h2 class="text-4xl font-semibold mb-3 text-white">Enterprise‑grade. Agent‑ready.</h2>
-          <p class="text-gray-400 mb-6">
-            Deploy agents that plan, reason, and execute seamlessly across your stack.
-          </p>
-          <ul class="list-disc list-inside text-gray-400 space-y-1">
-            <li>Modular, event‑driven architecture</li>
-            <li>Observability hooks &amp; metrics</li>
-            <li>Role‑based policy &amp; access control</li>
-            <li>Secure gRPC &amp; REST interfaces</li>
-          </ul>
-        </div>
-        <!-- Right: visual -->
-        <div class="flex-1 lg:pl-10">
-          <div class="gradient-bg h-64 rounded-xl shadow-lg ring-1 ring-white/10 flex items-center justify-center w-full">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-white/60" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <rect x="3" y="3" width="18" height="18" rx="2" stroke-width="2"/>
-              <path d="M7 7h3v3H7zM14 14h3v3h-3zM10 14h3v3h-3zM14 7h3v3h-3z" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <div class="space-y-6">
-        <h3 id="services-build" class="text-3xl font-semibold text-white mb-4">What&nbsp;we&nbsp;build</h3>
-        <!-- Generative AI -->
-        <div class="card ring-1 ring-white/5 rounded-lg p-6 hover:-translate-y-1 hover:shadow-lg transition" data-aos="fade-up">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-300 mb-3" viewBox="0 0 24 24" stroke="currentColor" fill="none">
-            <path d="M12 3l2 4l4 .5l-3 3l.7 4l-3.7-2l-3.7 2l.7-4l-3-3l4-.5z" stroke-width="1.5" stroke-linejoin="round"/>
-          </svg>
-          <h3 class="text-xl font-semibold text-white mb-3">Generative AI</h3>
-          <p class="text-base text-gray-400 mb-4">
-            We develop tailored generative models adapted to your domain.
-          </p>
-          <h4 class="text-base font-medium text-gray-300 mb-2">Core capabilities</h4>
-          <ul class="list-disc list-inside text-base text-gray-400 space-y-1">
-            <li>Domain‑specific LLM fine‑tuning &amp; RAG pipelines</li>
-            <li>Multimodal content generation (images, voice, video)</li>
-            <li>Custom chatbots &amp; copilots integrated with private data</li>
-          </ul>
         </div>
 
-        <!-- Agentic AI -->
-        <div class="card ring-1 ring-white/5 rounded-lg p-6 hover:-translate-y-1 hover:shadow-lg transition" data-aos="fade-up">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-300 mb-3" viewBox="0 0 24 24" stroke="currentColor" fill="none">
-            <path d="M12 2a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v3h-2l1 4h-2l-1-4h-6l-1 4h-2l1-4h-2v-3a2 2 0 0 1 2-2h2v-2a4 4 0 0 1 4-4z" stroke-width="1.5" stroke-linejoin="round"/>
-          </svg>
-          <h3 class="text-xl font-semibold text-white mb-3">Agentic AI</h3>
-          <p class="text-base text-gray-400 mb-4">
-            Intelligent agents that assist with planning, reasoning, and automation.
-          </p>
-          <h4 class="text-base font-medium text-gray-300 mb-2">Core capabilities</h4>
-          <ul class="list-disc list-inside text-base text-gray-400 space-y-1">
-            <li>Goal‑driven multi‑agent orchestration with memory</li>
-            <li>Automated data &amp; document processing pipelines</li>
-            <li>Decision‑making engines that blend business rules &amp; AI</li>
-          </ul>
+        <!-- Zeta-Bio Product Block with new abstract image -->
+        <div class="content-block" data-aos="fade-up" data-aos-delay="100">
+            <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+            </div>
+            <div class="text-content bg-[#111111]">
+                <h3 class="text-xl font-semibold text-white">Zeta-Bio</h3>
+                <p class="text-gray-400 mt-2 text-sm">An AI agent to accelerate biotech R&D by analyzing vast genomic datasets.</p>
+                <span class="inline-block mt-4 text-xs font-mono text-gray-500">R&D / In Development</span>
+            </div>
         </div>
 
-        <!-- Edge AI -->
-        <div class="card ring-1 ring-white/5 rounded-lg p-6 hover:-translate-y-1 hover:shadow-lg transition" data-aos="fade-up">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-300 mb-3" viewBox="0 0 24 24" stroke="currentColor" fill="none">
-            <rect x="6" y="6" width="12" height="12" rx="2" stroke-width="1.5"/>
-            <path d="M9 9h6v6H9z" stroke-width="1.5"/>
-          </svg>
-          <h3 class="text-xl font-semibold text-white mb-3">Edge AI</h3>
-          <p class="text-base text-gray-400 mb-4">
-            We bring AI closer to the edge for faster, privacy-friendly insights.
-          </p>
-          <h4 class="text-base font-medium text-gray-300 mb-2">Core capabilities</h4>
-          <ul class="list-disc list-inside text-base text-gray-400 space-y-1">
-            <li>Model compression &amp; quantisation for ARM / MCU</li>
-            <li>Real‑time vision &amp; speech on embedded devices</li>
-            <li>Offline inference for privacy‑critical applications</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    </div>
+</section>
+    <!-- ====================================================== -->
+<!--             NEW: SERVICES SECTION (DIAGRAMS)             -->
+<!-- ====================================================== -->
+<section id="services" class="w-full main-content-width mx-auto px-6 py-24">
+    <div class="mb-12" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold text-white">Core Capabilities</h2>
+    </div>
 
-     <!-- About Us -->
- <section id="about-us" class="snap-start max-w-5xl w-full mx-auto px-6 py-8" data-aos="fade-up">
-   <div class="section-grid-bg px-6 py-12 rounded-lg">
-     <div class="section-flex max-w-5xl mx-auto">
-       <!-- Text -->
-       <div class="flex-1">
-         <h2 class="text-4xl font-semibold mb-4 text-white">About Us</h2>
-         <p class="text-gray-400 mb-4 leading-relaxed">
-           We deliver practical GenAI, Agentic AI, and Edge AI solutions to solve real-world challenges.
-         </p>
-         <p class="text-gray-400 mb-4 leading-relaxed">
-           Operating remotely, we collaborate closely with clients worldwide through transparent communication and agile workflows.
-         </p>
-         <p class="text-gray-400 leading-relaxed">
-           We aspire to democratize AI by building accessible, scalable, and ethical platforms that empower businesses of every size to innovate.
-         </p>
-         <p class="text-gray-400 mb-4 leading-relaxed">
-           Though early in our journey, we’re driven by a clear vision and a strong foundation in applied AI.
-         </p>
-       </div>
-       <!-- Decorative card -->
-       <div class="flex-1 lg:pl-10 mt-6 md:mt-0">
-         <div class="card bg-zinc-800 p-6 rounded-xl ring-1 ring-white/10">
-           <h3 class="text-xl font-semibold text-white mb-2">Our Approach</h3>
-           <p class="text-gray-400">
-             We combine deep domain expertise, open standards, and rapid iteration to ensure seamless integration and maximum impact.
-           </p>
-         </div>
-       </div>
-     </div>
-   </div>
- </section>
-
-    <!-- Contact -->
-    <section id="contact" class="snap-start max-w-5xl w-full mx-auto px-6 py-8" data-aos="fade-up">
-      <h2 class="text-4xl font-semibold mb-6 text-center text-white">Let’s build something intelligent together.</h2>
-      <p class="text-gray-400 mb-6 text-center">
-        Prefer email? Reach us at
-        <a href="mailto:contact@zetayu.tech" class="underline text-gray-300 hover:text-white">contact@zetayu.tech</a>
-        or
-        <a href="mailto:sandeep@zetayu.tech" class="underline text-gray-300 hover:text-white">sandeep@zetayu.tech</a>
-      </p>
-      <form action="http://localhost:8000/contact" method="POST" class="space-y-4">
-        <input type="text" name="name" placeholder="Your Name" required
-               class="w-full p-3 bg-zinc-800 text-white rounded focus:outline-none focus:ring focus:ring-zinc-600"/>
-        <input type="email" name="email" placeholder="Your Email" required
-               class="w-full p-3 bg-zinc-800 text-white rounded focus:outline-none focus:ring focus:ring-zinc-600"/>
-        <textarea name="message" placeholder="Your Message" required
-                  class="w-full p-3 bg-zinc-800 text-white rounded h-24 resize-none focus:outline-none focus:ring focus:ring-zinc-600"></textarea>
-        <button type="submit"
-                class="button-ripple bg-gray-100 text-black font-medium px-5 py-2 text-sm rounded hover:brightness-110 transition">
-          Send
-        </button>
-      </form>
-    </section>
-
-    <!-- Footer -->
-    <footer class="w-full bg-zinc-950/80 border-t border-zinc-800 text-gray-400 text-sm">
-      <div class="h-px w-full bg-zinc-700/60"></div>
-      <div class="max-w-5xl mx-auto px-6 py-10 grid gap-8 md:grid-cols-3">
-        <!-- Brand -->
-        <div>
-          <h3 class="text-gray-100 font-semibold mb-3">Zetayu</h3>
-          <p class="leading-relaxed text-sm">
-            Remote‑first studio building practical AI systems for enterprises worldwide.
-          </p>
+    <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Generative AI Service Block -->
+        <div class="content-block" data-aos="fade-up">
+            <div class="h-64 bg-zinc-900 flex items-center justify-center p-8">
+                <!-- Minimalist Diagram for Generative AI -->
+                <svg class="w-28 h-28 text-blue-400" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M40 60C51.0457 60 60 51.0457 60 40C60 28.9543 51.0457 20 40 20C28.9543 20 20 28.9543 20 40C20 51.0457 28.9543 60 40 60Z" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M40 70C56.5685 70 70 56.5685 70 40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1 8"/>
+                </svg>
+            </div>
+            <div class="text-content bg-[#111111]">
+                <h3 class="text-xl font-semibold text-white">Generative AI</h3>
+                <p class="text-gray-400 mt-2 text-sm">Custom models, RAG, and secure LLM integration.</p>
+            </div>
         </div>
 
-        <!-- Navigation -->
-        <div>
-          <h4 class="text-gray-300 font-medium mb-2">Navigate</h4>
-          <ul class="space-y-1 text-xs">
-            <li><a href="#intro" class="text-xs hover:text-white">Introduction</a></li>
-            <li><a href="#about" class="text-xs hover:text-white">About</a></li>
-            <li><a href="#services" class="text-xs hover:text-white">Services</a></li>
-            <li><a href="#contact" class="text-xs hover:text-white">Contact</a></li>
-          </ul>
+        <!-- Agentic AI Service Block -->
+        <div class="content-block" data-aos="fade-up" data-aos-delay="100">
+            <div class="h-64 bg-zinc-900 flex items-center justify-center p-8">
+                <!-- Minimalist Diagram for Agentic AI -->
+                <svg class="w-28 h-28 text-green-400" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="40" r="7" stroke="currentColor" stroke-width="1.5"/>
+                    <circle cx="60" cy="40" r="7" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M27 40H53" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 5"/>
+                    <path d="M53 40L48 35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M53 40L48 45" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="text-content bg-[#111111]">
+                <h3 class="text-xl font-semibold text-white">Agentic AI</h3>
+                <p class="text-gray-400 mt-2 text-sm">Autonomous agents to automate complex workflows.</p>
+            </div>
         </div>
 
-        <!-- Contact -->
-        <div>
-          <h4 class="text-gray-300 font-medium mb-2">Contact</h4>
-          <p class="text-sm">
-            General:&nbsp;
-            <a href="mailto:contact@zetayu.tech" class="underline hover:text-white">contact@zetayu.tech</a><br/>
-            Founder:&nbsp;
-            <a href="mailto:sandeep@zetayu.tech" class="underline hover:text-white">sandeep@zetayu.tech</a>
-          </p>
+        <!-- Edge AI Service Block -->
+        <div class="content-block" data-aos="fade-up" data-aos-delay="200">
+             <div class="h-64 bg-zinc-900 flex items-center justify-center p-8">
+                <!-- Minimalist Diagram for Edge AI -->
+                <svg class="w-28 h-28 text-purple-400" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 20L40 12L55 20L55 36L40 44L25 36L25 20Z" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M25 50L40 42L55 50L55 66L40 74L25 66L25 50Z" opacity="0.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <div class="text-content bg-[#111111]">
+                <h3 class="text-xl font-semibold text-white">Edge AI</h3>
+                <p class="text-gray-400 mt-2 text-sm">Model optimization for on-device, real-time inference.</p>
+            </div>
         </div>
-      </div>
 
-      <div class="border-t border-zinc-800 text-center py-4">
-        &copy; 2025 Zetayu. All rights reserved.
-      </div>
-    </footer>
+    </div>
+</section>
+
+    <!-- ====================================================== -->
+<!--           OUR APPROACH SECTION (TYPOGRAPHY-FOCUSED)    -->
+<!-- ====================================================== -->
+<section id="our-approach" class="w-full main-content-width mx-auto px-6 py-24">
+    <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold text-white">Our Engineering Process</h2>
+        <p class="mt-4 text-width mx-auto text-gray-400 leading-relaxed">
+            Successful AI implementation is a result of rigorous engineering, clear communication, and a focus on practical outcomes.
+        </p>
+    </div>
+
+    <div class="space-y-12">
+        <!-- Step 1: Collaborative Design -->
+        <div class="grid md:grid-cols-3 gap-4 items-start" data-aos="fade-up">
+            <div class="md:col-span-1 flex items-baseline gap-4">
+                <span class="text-5xl font-semibold text-gray-700">01</span>
+                <h3 class="text-xl font-semibold text-white">Collaborative Design</h3>
+            </div>
+            <div class="md:col-span-2">
+                <p class="text-gray-400 leading-relaxed">
+                    We begin with a deep dive into your goals. We architect a solution with clear specifications, system diagrams, and success metrics before any development begins, ensuring perfect alignment.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 2: Open Standards -->
+        <div class="grid md:grid-cols-3 gap-4 items-start" data-aos="fade-up" data-aos-delay="100">
+            <div class="md:col-span-1 flex items-baseline gap-4">
+                <span class="text-5xl font-semibold text-gray-700">02</span>
+                <h3 class="text-xl font-semibold text-white">Open Standards</h3>
+            </div>
+            <div class="md:col-span-2">
+                <p class="text-gray-400 leading-relaxed">
+                    We build on open-source technologies wherever possible to ensure portability and prevent vendor lock-in. This gives you full ownership and control of your technical stack for the long term.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 3: Production Focus -->
+        <div class="grid md:grid-cols-3 gap-4 items-start" data-aos="fade-up" data-aos-delay="200">
+            <div class="md:col-span-1 flex items-baseline gap-4">
+                <span class="text-5xl font-semibold text-gray-700">03</span>
+                <h3 class="text-xl font-semibold text-white">Production Focus</h3>
+            </div>
+            <div class="md-col-span-2">
+                <p class="text-gray-400 leading-relaxed">
+                    Our work isn't done until the system is deployed, monitored, and stable. We build well-documented, testable systems designed for long-term maintenance in your operational environment.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ====================================================== -->
+<!--             NEW: MODERN CONTACT US SECTION             -->
+<!-- ====================================================== -->
+<section id="contact" class="w-full main-content-width mx-auto px-6 py-32">
+    <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-semibold text-white">Start a Conversation</h2>
+        <p class="mt-4 text-width mx-auto text-gray-400 leading-relaxed">
+            Have a project in mind or a technical challenge to discuss? We're ready to listen. Fill out the form below or email us directly.
+        </p>
+    </div>
+
+    <!-- Contact Form Card -->
+    <div class="card max-w-2xl mx-auto p-8 md:p-10" data-aos="fade-up" data-aos-delay="100">
+        <!-- 
+          IMPORTANT: For this form to work, you need to use a service like Web3Forms (free).
+          1. Go to web3forms.com and get your access key.
+          2. Replace "YOUR_ACCESS_KEY_HERE" with your key.
+        -->
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+            
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"> 
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                    <input type="text" name="name" id="name" required class="w-full px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                    <input type="email" name="email" id="email" required class="w-full px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200">
+                </div>
+            </div>
+            <div>
+                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">How can we help?</label>
+                <textarea name="message" id="message" rows="5" required class="w-full px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200"></textarea>
+            </div>
+            <div>
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-[1.02]">
+                    Send Message
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- ====================================================== -->
+<!--             NEW: EXPANDED PROFESSIONAL FOOTER          -->
+<!-- ====================================================== -->
+<footer class="w-full text-gray-400 border-t border-white/10 mt-16">
+    <div class="main-content-width mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+            
+            <!-- Column 1: Brand & Mission -->
+            <div class="md:col-span-2">
+                <a href="#home" class="text-white font-bold text-2xl">Zetayu</a>
+                <p class="mt-4 text-sm leading-relaxed max-w-xs">
+                    Remote‑first studio building practical AI systems for enterprises worldwide.
+                </p>
+            </div>
+
+            <!-- Column 2: Navigation -->
+            <div>
+                <h4 class="text-white font-semibold tracking-wide mb-4">Navigation</h4>
+                <nav class="space-y-3 text-sm">
+                    <a href="#services" class="block hover:text-white transition-colors">Services</a>
+                    <a href="#pipeline" class="block hover:text-white transition-colors">R&D</a>
+                    <a href="#our-approach" class="block hover:text-white transition-colors">Our Approach</a>
+                    <a href="#contact" class="block hover:text-white transition-colors">Contact</a>
+                </nav>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div>
+                <h4 class="text-white font-semibold tracking-wide mb-4">Get in touch</h4>
+                <div class="space-y-3 text-sm">
+                    <p>
+
+                        <a href="mailto:contact@zetayu.tech" class="hover:text-white transition-colors">contact@zetayu.tech</a>
+                    </p>
+                    <p>
+                        <a href="mailto:sandeep@zetayu.tech" class="hover:text-white transition-colors">sandeep@zetayu.tech</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sub-footer with Copyright -->
+        <div class="mt-20 pt-8 border-t border-white/10 text-center text-sm text-gray-500">
+            <p>© 2024 Zetayu. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    
   </main>
-</main>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
+  // Initialize AOS (Animate on Scroll)
   document.addEventListener('DOMContentLoaded', () => {
-    // AOS
-    AOS.init({ once: true, offset: 80 });
+    AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-quad' });
 
-    // Parallax: small move on scroll
-    const title = document.querySelector('.parallax');
-    window.addEventListener('scroll', () => {
-      const offset = window.scrollY * 0.05;
-      title.style.transform = `translateY(${offset}px)`;
-    });
-
-    // Theme toggle
-    const toggle = document.getElementById('toggleTheme');
-    const root = document.documentElement;
-    toggle.addEventListener('click', () => {
-      root.classList.toggle('dark');
-      localStorage.setItem('nd-theme', root.classList.contains('dark') ? 'dark' : 'light');
-    });
-    // load saved preference
-    if (localStorage.getItem('nd-theme') === 'dark') {
-      root.classList.add('dark');
+    // Interactive Hero Spotlight Effect
+    const spotlight = document.getElementById('hero-spotlight');
+    if (spotlight) {
+      window.addEventListener('mousemove', (e) => {
+        spotlight.style.setProperty('--x', e.clientX + 'px');
+        spotlight.style.setProperty('--y', e.clientY + 'px');
+      });
     }
   });
 </script>
