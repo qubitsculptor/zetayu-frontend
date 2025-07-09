@@ -104,16 +104,20 @@
 </head>
 <body class="antialiased">
   <!-- Sidebar -->
-  <aside class="fixed top-0 left-0 hidden md:flex flex-col h-full w-60 bg-black/30 backdrop-blur-sm border-r border-white/10 px-6 py-8 z-20">
-    <!-- Polished Text-Based Logo -->
+  <!-- ====================================================== -->
+<!--             UPDATED SIDEBAR NAVIGATION                 -->
+<!-- ====================================================== -->
+<aside class="fixed top-0 left-0 hidden md:flex flex-col h-full w-60 bg-black/70 backdrop-blur-sm border-r border-white/10 px-6 py-8 z-20">
     <a href="#home" class="text-white font-mono tracking-widest uppercase font-bold mb-10 text-lg">Zetayu</a>
     <nav class="space-y-4 text-sm">
-      <a href="#pipeline" class="block text-gray-400 hover:text-white transition-colors">In The Pipeline</a>
-      <a href="#services" class="block text-gray-400 hover:text-white transition-colors">Services</a>
-      <a href="#our-approach" class="block text-gray-400 hover:text-white transition-colors">Our Approach</a>
-      <a href="#contact" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
+        <a href="#services" class="block text-gray-400 hover:text-white transition-colors">Services</a>
+        <a href="#pipeline" class="block text-gray-400 hover:text-white transition-colors">R&D</a>
+        <!-- NEW LINK -->
+        <a href="#about-us" class="block text-gray-400 hover:text-white transition-colors">Our Mission</a>
+        <a href="#our-approach" class="block text-gray-400 hover:text-white transition-colors">Our Approach</a>
+        <a href="#contact" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
     </nav>
-  </aside>
+</aside>
 
   <main class="min-h-screen flex flex-col items-center md:ml-60">
     <!-- Header -->
@@ -286,6 +290,33 @@
     </div>
 </section>
 
+<!-- ====================================================== -->
+<!--           NEW: ABOUT US / OUR MISSION SECTION          -->
+<!-- ====================================================== -->
+<section id="about-us" class="w-full main-content-width mx-auto px-6 py-24">
+    <div class="grid md:grid-cols-3 gap-8 md:gap-16">
+        
+        <!-- The Heading (Left Column) -->
+        <div class="md:col-span-1" data-aos="fade-up">
+            <h2 class="text-3xl font-semibold text-white sticky top-24">Our Mission</h2>
+        </div>
+
+        <!-- The Story (Right Column) -->
+        <div class="md:col-span-2 space-y-8 text-gray-300 text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+            <p>
+                Zetayu was founded on a simple but powerful premise: that the true potential of artificial intelligence lies not in imitation, but in augmentation. We believe in building AI as a purpose-driven tool, an extension of human ability, designed to tackle the most complex and meaningful challenges in science and enterprise.
+            </p>
+            <p>
+                This vision requires a sustainable, long-term approach. Our business is built on a virtuous cycle: the work we do in our <strong class="text-white">Services</strong> division, engineering cutting-edge solutions for our clients, directly funds and informs our <strong class="text-white">Applied Research</strong>. This model allows us to remain at the forefront of the industry, invest in solving hard problems, and ensure our product development is grounded in real-world, production-level challenges.
+            </p>
+            <p>
+                We are a focused, mission-oriented team. Whether we are building a bespoke solution for a client or developing our own proprietary systems, our commitment is to engineering excellence, practical outcomes, and the pursuit of impactful innovation.
+            </p>
+        </div>
+
+    </div>
+</section>
+
     <!-- ====================================================== -->
 <!--             NEW: MODERN CONTACT US SECTION             -->
 <!-- ====================================================== -->
@@ -332,7 +363,7 @@
 </section>
 
 <!-- ====================================================== -->
-<!--             NEW: EXPANDED PROFESSIONAL FOOTER          -->
+<!--             UPDATED PROFESSIONAL FOOTER                -->
 <!-- ====================================================== -->
 <footer class="w-full text-gray-400 border-t border-white/10 mt-16">
     <div class="main-content-width mx-auto px-6 py-20">
@@ -340,7 +371,7 @@
             
             <!-- Column 1: Brand & Mission -->
             <div class="md:col-span-2">
-                <a href="#home" class="text-white font-bold text-2xl">Zetayu</a>
+                <a href="#home" class="text-white font-mono tracking-widest uppercase font-bold text-xl">Zetayu</a>
                 <p class="mt-4 text-sm leading-relaxed max-w-xs">
                     Remote‑first studio building practical AI systems for enterprises worldwide.
                 </p>
@@ -352,6 +383,8 @@
                 <nav class="space-y-3 text-sm">
                     <a href="#services" class="block hover:text-white transition-colors">Services</a>
                     <a href="#pipeline" class="block hover:text-white transition-colors">R&D</a>
+                    <!-- NEW LINK -->
+                    <a href="#about-us" class="block hover:text-white transition-colors">Our Mission</a>
                     <a href="#our-approach" class="block hover:text-white transition-colors">Our Approach</a>
                     <a href="#contact" class="block hover:text-white transition-colors">Contact</a>
                 </nav>
@@ -362,10 +395,11 @@
                 <h4 class="text-white font-semibold tracking-wide mb-4">Get in touch</h4>
                 <div class="space-y-3 text-sm">
                     <p>
-
+                        
                         <a href="mailto:contact@zetayu.tech" class="hover:text-white transition-colors">contact@zetayu.tech</a>
                     </p>
                     <p>
+                        
                         <a href="mailto:sandeep@zetayu.tech" class="hover:text-white transition-colors">sandeep@zetayu.tech</a>
                     </p>
                 </div>
